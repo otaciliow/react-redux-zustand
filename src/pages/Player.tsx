@@ -1,5 +1,3 @@
-import { ChevronDown, Video } from 'lucide-react'
-
 import { Header } from '../components/Header';
 import { VideoPlayer } from '../components/Video'
 import { Module } from '../components/Module';
@@ -20,7 +18,6 @@ export function VideoContainer() {
                         <Module moduleIndex={0} title="Desvendando Redux" amountOfLessons={3} />
                         <Module moduleIndex={1} title="Desvendando Redux" amountOfLessons={3} />
                         <Module moduleIndex={2} title="Desvendando Redux" amountOfLessons={3} />
-
                     </aside>
                 </main>
             </div>
