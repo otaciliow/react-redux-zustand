@@ -1,16 +1,9 @@
 import { MessageCircle } from "lucide-react";
 
-import { useAppSelector } from "../store";
+import { useCurrentLesson } from "../store/slices/player";
 
 export function Header() {
-    const { currentModule, currentLesson } = useAppSelector(state => {
-            const { currentModuleIndex, currentLessonIndex } = state.player
-    
-            const currentModule = state.player.course.modules[currentModuleIndex]
-            const currentLesson = state.player.course.modules[currentModuleIndex].lessons[currentLessonIndex]
-    
-            return { currentModule, currentLesson}
-        })
+    const { currentModule, currentLesson } = useCurrentLesson()
 
     return (
         <>
