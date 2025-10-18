@@ -8,7 +8,7 @@ import { useCurrentLesson } from '../store/slices/player';
 
 export function VideoContainer() {
     const modules = useAppSelector(state => {
-        return state.player.course.modules
+        return state.player.courses.modules
     })
 
     const { currentLesson } = useCurrentLesson()

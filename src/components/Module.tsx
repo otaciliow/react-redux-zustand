@@ -23,7 +23,7 @@ export function Module({title, amountOfLessons, moduleIndex}: ModuleProps) {
     })
 
     const lessons = useAppSelector((state) => {
-        return state.player.course.modules[moduleIndex].lessons
+        return state.player.courses.modules[moduleIndex].lessons
     })
 
     return (
