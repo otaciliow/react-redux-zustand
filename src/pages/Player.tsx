@@ -14,7 +14,7 @@ export function VideoContainer() {
     const { currentLesson } = useCurrentLesson()
 
     useEffect(() => {
-        document.title = `Assinstindo: ${currentLesson.title}`
+        document.title = `Assistindo: ${currentLesson.title}`
     }, [currentLesson])
 
     return (
