@@ -1,13 +1,12 @@
 import { MessageCircle, Loader } from "lucide-react";
 
-import { useCurrentLesson } from "../store/slices/player";
-import { useAppSelector } from '../store';
+import { useStore, useCurrentLesson } from '../zustand-store';
 
 export function Header() {
     const { currentModule, currentLesson } = useCurrentLesson()
-    const isCourseLoading = useAppSelector(state => state.player.isLoading)
+    const isLoading = useStore(store => store.isLoading)
 
-    if (isCourseLoading) {
+    if (isLoading) {
         return <h1 className="text-2-xl font-bold flex items-center gap-1">Carregando <Loader className="h-3 w-3 text-zinc-400 animate-spin" /></h1>
     }
 
